@@ -1,0 +1,57 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/datamaps/0.5.9/datamaps.world.min.js"></script>
+
+<style>
+  .hoverinfo {
+    padding: 50px;
+  }
+</style>
+
+<div id="clearpath_map"></div>
+
+<script>
+  var datamap = new Datamap({
+    scope: "world",
+    projection: "mercator",
+    responsive: true,
+    element: document.getElementById("clearpath_map"),
+    geographyConfig: {
+      highlightOnHover: false,
+      popupTemplate: function (geography, data) {
+        return (
+          '<div class="hoverinfo" style="padding:20px;">' +
+          geography.properties.name +
+          "<br/>" +
+          data.tooltipCopy +
+          " "
+        );
+      },
+      highlightBorderWidth: 3,
+    },
+
+    fills: {
+      work: "#27aa9f",
+      defaultFill: "#bdc3c7",
+    },
+    data: {
+      USA: {
+        fillKey: "work",
+        tooltipCopy: "Lorem Ipsum Dolor",
+      },
+      RUS: {
+        fillKey: "work",
+        tooltipCopy: "Lorem Ipsum Dolor",
+      },
+      CHN: {
+        fillKey: "work",
+        tooltipCopy: "Lorem Ipsum Dolor",
+      },
+    },
+  });
+
+  // Pure JavaScript
+  window.addEventListener("resize", function () {
+    datamap.resize();
+  });
+</script>

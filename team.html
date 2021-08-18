@@ -1,0 +1,179 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+<style>
+  @import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css";
+  .team-container {
+    font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+  .team-img {
+    max-height: 225px;
+    vertical-align: middle;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  .team-img img {
+    vertical-align: middle;
+    transition: transform 0.5s ease;
+  }
+  .team-img img:hover {
+    transform: scale(1.2);
+  }
+  .team-single {
+    visibility: hidden;
+    padding: 20px;
+    position: relative;
+  }
+  .team-name {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 1;
+  }
+  .team-title {
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: 767.9px) {
+    .team-container {
+      grid-template-columns: 1fr;
+    }
+
+    .team-single {
+      align-self: center;
+      justify-self: center;
+    }
+
+    .team-img {
+      max-height: 100%;
+    }
+  }
+</style>
+
+<div class="team-container">
+  <div class="team-single animate__animated">
+    <div class="team-img">
+      <a href="https://clearpath-strategies.com/david-bluestone">
+        <img
+          src="https://images.squarespace-cdn.com/content/v1/5c250e1c2487fd584efa37f7/1624040849164-AWCDDBBX0GGYQOPXT6OO/Headshot%252B1.jpg?format=300w"
+          alt="David Bluestone"
+      /></a>
+    </div>
+    <div class="team-name">David Bluestone</div>
+    <div class="team-title">Founder, Partner</div>
+  </div>
+  <div class="team-single animate__animated">
+    <div class="team-img">
+      <a href="https://clearpath-strategies.com/john-garrett">
+        <img
+        src="https://images.squarespace-cdn.com/content/v1/5c250e1c2487fd584efa37f7/1623433219121-35JW3YSEMXIDMZ7UL2N0/John+new+headshot.jpg?format=300w"
+        alt="David Bluestone"
+      />
+      </a>
+    </div>
+    <div class="team-name">John Garrett</div>
+    <div class="team-title">Founder, Partner</div>
+  </div>
+  <div class="team-single animate__animated">
+    <div class="team-img">
+      <a href="https://clearpath-strategies.com/john-garrett">
+        <img
+        src="https://images.squarespace-cdn.com/content/v1/5c250e1c2487fd584efa37f7/1623432911491-4Y7QIHRHMWL5W36Z2Z2L/Adam+headshot.jpg?format=300w"
+        alt="Adam Slater"
+      />
+      </a>
+    </div>
+    <div class="team-name">Adam Slater</div>
+    <div class="team-title">COO</div>
+  </div>
+  <div class="team-single animate__animated">
+    <div class="team-img">
+      <a href="https://clearpath-strategies.com/adam-slater">
+        <img
+        src="https://images.squarespace-cdn.com/content/v1/5c250e1c2487fd584efa37f7/1623432907289-955MYKXPLQKPZIY6JHJ0/Caitlin%2BHeadshot.jpg?format=300w"
+        alt="Adam Slater"
+      />
+      </a>
+    </div>
+    <div class="team-name">Caitlin Evans</div>
+    <div class="team-title">Director of Research</div>
+  </div>
+  <div class="team-single animate__animated">
+    <div class="team-img">
+      <a href="https://clearpath-strategies.com/caitlin-evans">
+        <img
+        src="https://images.squarespace-cdn.com/content/v1/5c250e1c2487fd584efa37f7/1623433219109-F08NB0DP6FKTJ9AC0DP1/Steph+headshot.jpg?format=300w"
+        alt="David Bluestone"
+        style="margin-top: -15px"
+      />
+      </a>
+    </div>
+    <div class="team-name">Stephanie Fairchild</div>
+    <div class="team-title">Senior Analyst</div>
+  </div>
+  <div class="team-single animate__animated">
+    <div class="team-img">
+      <a href="https://clearpath-strategies.com/sofia-siqueira">
+        <img
+        src="https://images.squarespace-cdn.com/content/v1/5c250e1c2487fd584efa37f7/1623432907160-HDIX6N4HMBTOI9UB7U35/sofia%2Bheadshot.jpg?format=300w"
+        alt="Sofia Siqueira"
+      />
+      </a>
+    </div>
+    <div class="team-name">Sofia Siqueira</div>
+    <div class="team-title">Analyst</div>
+  </div>
+  <div class="team-single animate__animated">
+    <div class="team-img">
+      <a href="https://clearpath-strategies.com/Ashley Warren">
+        <img
+        src="https://images.squarespace-cdn.com/content/v1/5c250e1c2487fd584efa37f7/1623432911067-IBQG58DEC7LAYXNWBVU8/New+headshot.jpg?format=300w"
+        alt="Ashley Warren"
+      />
+      </a>
+    </div>
+    <div class="team-name">Ashley Warren</div>
+    <div class="team-title">Analyst</div>
+  </div>
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"
+></script>
+<script>
+  // Scroll function courtesy of Scott Dowding; http://stackoverflow.com/questions/487073/check-if-element-is-visible-after-scrolling
+
+  $(document).ready(function () {
+    // Check if element is scrolled into view
+    function isScrolledIntoView(elem) {
+      var docViewTop = $(window).scrollTop();
+      var docViewBottom = docViewTop + $(window).height();
+
+      var elemTop = $(elem).offset().top - 200;
+      var elemBottom = elemTop + $(elem).height();
+
+      return elemBottom <= docViewBottom && elemTop >= docViewTop;
+    }
+
+    $(".team-single").each(function () {
+      if (isScrolledIntoView(this) === true) {
+        $(this).css("visibility", "visible");
+        $(this).addClass("animate__fadeInDown");
+      }
+    });
+    // If element is scrolled into view, fade it in
+    $(window).scroll(function () {
+      $(".team-single").each(function () {
+        if (isScrolledIntoView(this) === true) {
+          $(this).css("visibility", "visible");
+          $(this).addClass("animate__fadeInDown");
+        }
+      });
+    });
+  });
+</script>
