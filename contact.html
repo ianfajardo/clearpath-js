@@ -6,26 +6,39 @@
   .text-center {
     text-align: center;
   }
-  
+
   .contactus-page h2 {
-      font-size: 3rem;
-      text-transform: initial;
-      font-weight: bold;
+    font-size: 3rem;
+    text-transform: initial;
+    font-weight: bold;
   }
   .contactus-page h3 {
-      text-transform: uppercase;
-      font-size: 1.5rem;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    padding-top: 1rem;
   }
-  .contactus-email, .contactus-phone {
-      font-size: 20px;
+  .contactus-email,
+  .contactus-phone {
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    color: #fff;
+    background-color: #36b3a8;
+    border-color: #36b3a8;
+    padding: 30px;
+    border-radius: 20px;
   }
-  .contactus-email {
-    text-decoration: underline;
+  @media screen and (max-width: 961px) {
+    .align-items-center {
+      display: block;
+    }
   }
 </style>
 <div class="contactus-page">
   <div class="row sqs-row align-items-center text-center">
-    <div class="col sqs-col-6 span-6 ">
+    <div class="col sqs-col-6 span-6">
       <h2>Ready to Find Your Clear Path?</h2>
       <h2>Contact Us.</h2>
     </div>
@@ -37,7 +50,38 @@
       <h3>Phone</h3>
       <div class="contactus-phone">+1 (415) 617-5382</div>
       <h3>Connect</h3>
-      <a href="https://www.linkedin.com/company/clearpath-strategies/about/" target="_blank"><img src="https://images.squarespace-cdn.com/content/v1/5c250e1c2487fd584efa37f7/1631377655416-CQRAV4DR80XCJC7UEX37/Linkedin-icon-design-premium-vector-PNG.png?format=100w" alt="LinkedIn"></a>
+      <div
+        class="
+          sqs-svg-icon--outer
+          social-icon-alignment-center
+          social-icons-color-standard
+          social-icons-size-extra-large
+          social-icons-shape-rounded
+          social-icons-style-knockout
+        "
+      >
+        <nav class="sqs-svg-icon--list">
+          <a
+            href="https://www.linkedin.com/company/clearpath-strategies/about/"
+            target="_blank"
+            class="sqs-svg-icon--wrapper linkedin-unauth"
+            aria-label="LinkedIn"
+          >
+            <div>
+              <svg class="sqs-svg-icon--social" viewBox="0 0 64 64">
+                <use
+                  class="sqs-use--icon"
+                  xlink:href="#linkedin-unauth-icon"
+                ></use>
+                <use
+                  class="sqs-use--mask"
+                  xlink:href="#linkedin-unauth-mask"
+                ></use>
+              </svg>
+            </div>
+          </a>
+        </nav>
+      </div>
     </div>
   </div>
 </div>
