@@ -43,10 +43,24 @@
   .cp-text-1 h2.xl {
     font-size: 3rem;
   }
+
+  .cp-text-1 h3.xl {
+    font-size: 1.5rem;
+  }
+
   .cp-text-1 p.xl {
     font-size: 25px;
     line-height: 1.5;
   }
+
+  .border-sep {
+    background: #36b3a8;
+    width: 100px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 5px;
+  }
+
   .bg-gray {
     background: #f7f7f7;
   }
@@ -147,24 +161,49 @@
     }
   }
 </style>
+
+<div class="bg-dark-gray">
+  <div class="container">
+    <div class="row sqs-row">
+      <div class="col sqs-col-12 span-12">
+        <div class="cp-text-1">
+          <h3
+            class="xl"
+            style="
+              margin-bottom: 15px;
+              color: #ffffff;
+              border-left: 5px solid #36b3a8;
+              padding-left: 15px;
+            "
+          >
+            ClearPath Strategies is a strategic research and consulting firm.
+            Our team serves leaders in technology, politics, business, and
+            progressive advocacy around the world.
+          </h3>
+          <h3 class="xl" style="color: #ffffff; text-transform: lowercase; opacity: 0.5">
+            Our cross-domain expertise and market position enable us to connect
+            how the world works today with what it will become.
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="container">
   <div class="cp-text-1">
     <div class="row sqs-row flex">
       <div class="col sqs-col-4 span-4">
-        <h2 class="xl">Our <br />Mission</h2>
+        <h2 class="xl" style="margin-bottom: 15px">Our <br />Mission</h2>
+        <div class="border-sep"></div>
       </div>
       <div class="col sqs-col-8 span-8">
         <p class="xl">
           ClearPath’s mission is to promote the game-changing leaders and
-          progressive forces around the world who tirelessly strive to make life
-          better for more people.
-        </p>
-        <p class="xl">
-          ClearPath is a full-service research and strategy consultancy for
-          political leaders, businesses, and organizations. Whether running for
-          election, advocating a cause, or seeking deeper consumer insights, we
-          provide you with actionable research and strategy to identify your
-          audience, connect you to them, and help you move them.
+          progressive forces around the world. Whether running for elected
+          office, bringing attention to your organization’s issue, or seeking
+          deeper understanding of your stakeholders, ClearPath helps good people
+          do great things.
         </p>
       </div>
     </div>
@@ -175,8 +214,9 @@
     <div class="cp-text-2">
       <h2>We proudly work with</h2>
       <p>
-        ClearPath Strategies works with leaders in politics, corporate,
-        non-profits and tech industry to deliver strategy-based solutions.
+        ClearPath Strategies works with leaders in political, corporate,
+        non-profit, and tech space to provide clear direction and strategy-based
+        solutions for our clients’ unique challenges.
       </p>
       <div
         class="sqs-block button-block sqs-block-button"
@@ -196,7 +236,7 @@
               href="https://clearpath-strategies.com/what-weve-done"
               class="sqs-block-button-element--medium sqs-block-button-element"
               data-initialized="true"
-              >View All of Our Clients</a
+              >What we've done so far</a
             >
           </div>
         </div>
