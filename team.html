@@ -115,6 +115,11 @@
     <div class="team-name">Caitlin Evans</div>
     <div class="team-title">Director of Research</div>
   </div>
+  
+  <div class="team-single animate__animated team-empty"></div>
+</div>
+
+<div class="team-container">
   <div class="team-single animate__animated">
     <div class="team-img">
       <a href="https://clearpath-strategies.com/stephanie-fairchild">
@@ -128,11 +133,6 @@
     <div class="team-name">Stephanie Fairchild</div>
     <div class="team-title">Senior Analyst</div>
   </div>
-  <div class="team-single animate__animated team-empty"></div>
-</div>
-
-<div class="team-container tc-grid-3">
-  <div class="team-single animate__animated team-empty"></div>
   <div class="team-single animate__animated">
     <div class="team-img">
       <a href="https://clearpath-strategies.com/sofia-siqueira">
@@ -157,35 +157,24 @@
     <div class="team-name">Ashley Warren</div>
     <div class="team-title">Analyst</div>
   </div>
+  
   <div class="team-single animate__animated">
     <div class="team-img">
-      <a href="https://clearpath-strategies.com/weston-credit">
+      <a href="https://clearpath-strategies.com/otto-gomez">
         <img
-          src="https://images.squarespace-cdn.com/content/v1/5c250e1c2487fd584efa37f7/1630011016569-CTZ9WFVTZ7XOBZXGZL4O/Weston+Credit.JPG?format=300w"
-          alt="Weston Credit"
+          src="https://images.squarespace-cdn.com/content/v1/5c250e1c2487fd584efa37f7/f13ef78f-b5f1-4af2-afb8-cd64af7146e1/Otto%2BGomez.jpg?format=300w"
+          alt="Otto Gomez"
         />
       </a>
     </div>
-    <div class="team-name">Weston Credit</div>
-    <div class="team-title">Assistant Analyst</div>
+    <div class="team-name">Otto Gomez</div>
+    <div class="team-title">Field Manager</div>
   </div>
-  <div class="team-single animate__animated team-empty"></div>
 </div>
 
 <div class="team-container tc-grid-3">
   <div class="team-single animate__animated team-empty"></div>
-  <div class="team-single animate__animated">
-    <div class="team-img">
-      <a href="https://clearpath-strategies.com/esther-kim">
-        <img
-          src="https://images.squarespace-cdn.com/content/v1/5c250e1c2487fd584efa37f7/c35ebf17-0a6f-4c17-bea5-d5014c9375f6/Esther%2BKim.jpeg?format=750w"
-          alt="Esther Kim"
-        />
-      </a>
-    </div>
-    <div class="team-name">Esther Kim</div>
-    <div class="team-title">Assistant Analyst</div>
-  </div>
+  
   <div class="team-single animate__animated">
     <div class="team-img">
       <a href="https://clearpath-strategies.com/leila-braganza">
@@ -200,6 +189,36 @@
   </div>
   <div class="team-single animate__animated">
     <div class="team-img">
+      <a href="https://clearpath-strategies.com/weston-credit">
+        <img
+          src="https://images.squarespace-cdn.com/content/v1/5c250e1c2487fd584efa37f7/1630011016569-CTZ9WFVTZ7XOBZXGZL4O/Weston+Credit.JPG?format=300w"
+          alt="Weston Credit"
+        />
+      </a>
+    </div>
+    <div class="team-name">Weston Credit</div>
+    <div class="team-title">Assistant Analyst</div>
+  </div>
+  <div class="team-single animate__animated">
+    <div class="team-img">
+      <a href="https://clearpath-strategies.com/esther-kim">
+        <img
+          src="https://images.squarespace-cdn.com/content/v1/5c250e1c2487fd584efa37f7/c35ebf17-0a6f-4c17-bea5-d5014c9375f6/Esther%2BKim.jpeg?format=750w"
+          alt="Esther Kim"
+        />
+      </a>
+    </div>
+    <div class="team-name">Esther Kim</div>
+    <div class="team-title">Assistant Analyst</div>
+  </div>
+  
+  <div class="team-single animate__animated team-empty"></div>
+</div>
+
+<div class="team-container">
+  <div class="team-single animate__animated team-empty"></div>
+  <div class="team-single animate__animated">
+    <div class="team-img">
       <a href="https://clearpath-strategies.com/willa-perlman">
         <img
           src="https://images.squarespace-cdn.com/content/v1/5c250e1c2487fd584efa37f7/5f5bcb63-6c3b-479b-b195-0ac5ee13f35a/Willa+Perlman.jpg?format=1000w"
@@ -210,11 +229,6 @@
     <div class="team-name">Willa Perlman</div>
     <div class="team-title">Assistant Analyst</div>
   </div>
-  <div class="team-single animate__animated team-empty"></div>
-</div>
-
-<div class="team-container tc-grid-3">
-  <div class="team-single animate__animated team-empty"></div>
   <div class="team-single animate__animated">
     <div class="team-img">
       <a href="https://clearpath-strategies.com/lindsey-prutsman">
@@ -228,8 +242,6 @@
     <div class="team-title">Assistant Analyst</div>
   </div>
   <div class="team-single animate__animated team-empty"></div>
-  <div class="team-single animate__animated team-empty"></div>
-  <div class="team-single animate__animated team-empty"></div>
 </div>
 
 <script
@@ -239,42 +251,9 @@
 ></script>
 <script>
   $(document).ready(function () {
-    // Check if element is scrolled into view
-    function isScrolledIntoView(elem) {
-      var docViewTop = $(window).scrollTop();
-      var docViewBottom = docViewTop + $(window).height();
-
-      var elemTop = $(elem).offset().top - 500;
-      var elemBottom = elemTop + $(elem).height();
-
-      return elemBottom <= docViewBottom && elemTop >= docViewTop;
-    }
-
-    function isStaticInView(elem) {
-      var docViewTop = $(window).scrollTop();
-      var docViewBottom = docViewTop + $(window).height();
-
-      var elemTop = $(elem).offset().top - 200;
-      var elemBottom = elemTop + $(elem).height();
-
-      return elemBottom <= docViewBottom && elemTop >= docViewTop;
-    }
-
     $(".team-single").each(function () {
-      if (isStaticInView(this) === true) {
-        $(this).css("visibility", "visible");
-        $(this).addClass("animate__fadeInDown");
-      }
-    });
-
-    // If element is scrolled into view, fade it in
-    $(window).scroll(function () {
-      $(".team-single").each(function () {
-        if (isScrolledIntoView(this) === true) {
-          $(this).css("visibility", "visible");
-          $(this).addClass("animate__fadeInDown");
-        }
-      });
+      $(this).css("visibility", "visible");
+      $(this).addClass("animate__fadeIn");
     });
   });
 </script>
