@@ -1,5 +1,8 @@
-<!-- start -->
 <style>
+  .desc-wrapper p em {
+    font-style: normal;
+    font-size: 1.25rem;
+  }
   #page {
     max-width: 100%;
     padding: 0;
@@ -16,9 +19,7 @@
     position: relative;
     z-index: 10;
   }
-  .cp-inner-text {
-    padding: 15px;
-  }
+
   .cp-text-1 {
     padding: 80px 0;
   }
@@ -36,12 +37,22 @@
     max-width: 200px;
     margin: 0 auto;
   }
+  .cp-static-gallery {
+    padding: 15px;
+    text-align: center;
+  }
+  .cp-static-gallery div {
+    display: inline-block;
+  }
+  .cp-static-gallery img {
+    max-width: 150px;
+  }
   .cp-text-1 .row.flex {
     display: flex;
     align-items: center;
   }
   .cp-text-1 h2.xl {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .cp-text-1 h3.xl {
@@ -61,8 +72,12 @@
     height: 5px;
   }
 
+  #preFooter {
+    display: none;
+  }
+
   .bg-gray {
-    background: #f7f7f7;
+    background: #e4e4e4;
   }
   .bg-dark-gray {
     background: #1f1f1f;
@@ -152,6 +167,126 @@
     width: 50px;
   }
 
+  .cp-inner-text {
+    position: relative;
+    padding: 0 3rem;
+    background: #4a4a4a;
+    transform: skew(-5deg);
+    transform-origin: top;
+    max-height: 353px;
+    height: 353px;
+    margin-left: 10px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cp-inner-text p.xl {
+    color: #ffffff;
+    position: relative;
+    z-index: 4;
+    font-size: 1.25rem;
+  }
+
+  .cp-inner-text:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #000;
+    opacity: 0.4;
+    z-index: 3;
+  }
+
+  .cp-inner-text-bg1 {
+    background: #36b3a8;
+  }
+
+  .cp-inner-text-bg1:before {
+    background: url("https://images.unsplash.com/photo-1523292562811-8fa7962a78c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=640&q=80")
+      center center no-repeat;
+    background-size: cover;
+  }
+
+  .cp-inner-text-bg2 {
+    background: #1f4b7c;
+  }
+
+  .cp-inner-text-bg2:before {
+    background: url("https://unsplash.com/photos/FWCjJ7VNm-k/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8MjB8fGN1cnZlfHwwfHx8fDE2MzkxNjcwODU&force=true&w=640")
+      center center no-repeat;
+    background-size: cover;
+  }
+
+  .cp-inner-text-bg3:before {
+    background: url("https://unsplash.com/photos/Q1p7bh3SHj8/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8MTR8fHRlY2hub2xvZ3l8fDB8fHx8MTYzOTA4NDgxNg&force=true&w=640")
+      center center no-repeat;
+    background-size: cover;
+  }
+
+  .cp-icon-title,
+  .cp-open-link {
+    transform: skew(5deg);
+    transform-origin: top;
+  }
+
+  .cp-icon-title {
+    position: relative;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    min-height: 92px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .cp-icon-title svg {
+    stroke: #ffffff;
+  }
+
+  .cp-icon-title h2 {
+    color: #ffffff;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+  }
+
+  .cp-open-link,
+  .cp-reset-link {
+    position: relative;
+    z-index: 4;
+    width: 25px;
+    padding: 5px 10px;
+    border: 1px solid #ffffff;
+    height: 25px;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .cp-reset-link {
+    display: none;
+    width: auto;
+    color: #ffffff;
+  }
+
+  .cp-open-link:hover,
+  .cp-reset-link:hover {
+    background: #ffffff;
+    color: #2f2f2f;
+  }
+
+  .cp-open-link:hover svg {
+    stroke: #2f2f2f;
+  }
+
+  .cp-open-link svg {
+    stroke: #ffffff;
+  }
+
   .cp-dark-box {
     background: #2f2f2f;
     border-left: 10px solid #36b3a8;
@@ -159,7 +294,32 @@
     padding: 60px;
   }
 
+  .one,
+  .two,
+  .three {
+    display: none;
+  }
+
+  .one:before,
+  .two:before,
+  .three:before {
+    display: none;
+  }
+
   @media screen and (max-width: 961px) {
+    .cp-inner-text {
+      height: auto;
+      max-height: none;
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+    .cp-inner-text,
+    .cp-icon-title,
+    .cp-open-link {
+      transform: skew(0deg);
+      transform-origin: top;
+      margin-left: 0;
+    }
     .row {
       display: block !important;
     }
@@ -181,30 +341,7 @@
   }
 </style>
 
-<div class="">
-  <div class="container">
-    <div class="row sqs-row">
-      <div class="col sqs-col-12 span-12">
-        <div class="cp-text-1 cp-dark-box">
-          <h3 class="xl" style="margin-bottom: 15px; color: #ffffff">
-            ClearPath Strategies is a strategic research and consulting firm.
-            Our team serves leaders in technology, politics, business, and
-            progressive advocacy around the world.
-          </h3>
-          <h3
-            class="xl"
-            style="color: #ffffff; text-transform: none; opacity: 0.5"
-          >
-            Our cross-domain expertise and market position enable us to connect
-            how the world works today with what it will become.
-          </h3>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div style="background: #2f2f2f; margin-top: 60px; color: #ffffff">
+<div style="background: #2f2f2f; color: #ffffff">
   <div class="container">
     <div class="cp-text-1">
       <div class="row sqs-row flex">
@@ -228,9 +365,9 @@
   </div>
 </div>
 
-<div class="">
-  <div class="cp-text-1">
-    <div class="container">
+<div class="cp-slanted1">
+  <div class="cp-text-1" style="padding-bottom: 0">
+    <div class="">
       <div class="row sqs-row">
         <div class="col sqs-col-12 span-12" style="text-align: center">
           <h2 class="xl" style="margin-bottom: 15px">
@@ -240,9 +377,12 @@
         </div>
       </div>
       <div class="row sqs-row">
-        <div class="col sqs-col-4 span-4">
-          <div class="cp-inner-text">
-            <div class="cp-icon">
+        <div class="col sqs-col-4 span-4 one-link">
+          <div class="cp-inner-text cp-inner-text-bg1">
+            <div class="cp-icon-title">
+              <h2>OUR POLITICAL CAMPAIGN DNA HELPS US SOLVE YOUR CHALLENGE</h2>
+            </div>
+            <div class="cp-open-link">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-6 w-6"
@@ -254,12 +394,64 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
                 />
               </svg>
             </div>
-            <h2>OUR POLITICAL CAMPAIGN DNA HELPS US SOLVE YOUR CHALLENGE</h2>
-            <p>
+            <div class="cp-reset-link">Go Back</div>
+          </div>
+        </div>
+        <div class="col sqs-col-4 span-4 two-link">
+          <div class="cp-inner-text cp-inner-text-bg2">
+            <div class="cp-icon-title">
+              <h2>HELPING LEADERS STAY AHEAD OF THE CURVE</h2>
+            </div>
+            <div class="cp-open-link">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
+              </svg>
+            </div>
+            <div class="cp-reset-link">Go Back</div>
+          </div>
+        </div>
+        <div class="col sqs-col-4 span-4 three-link">
+          <div class="cp-inner-text cp-inner-text-bg3">
+            <div class="cp-icon-title">
+              <h2>TECH STRATEGY</h2>
+            </div>
+            <div class="cp-open-link">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
+              </svg>
+            </div>
+            <div class="cp-reset-link">Go Back</div>
+          </div>
+        </div>
+        <div class="col sqs-col-8 span-8 one">
+          <div class="cp-inner-text" style="background: #36b3a8">
+            <p class="xl">
               ClearPath Strategies’ expertise is rooted in global politics,
               policy and issue advocacy campaigns. We design public opinion
               research to serve as the foundation of a winning campaign
@@ -270,26 +462,9 @@
             </p>
           </div>
         </div>
-        <div class="col sqs-col-4 span-4">
-          <div class="cp-inner-text">
-            <div class="cp-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
-                />
-              </svg>
-            </div>
-            <h2>HELPING LEADERS STAY AHEAD OF THE CURVE</h2>
-            <p>
+        <div class="col sqs-col-8 span-8 two">
+          <div class="cp-inner-text" style="background: #1f4b7c">
+            <p class="xl">
               Expanding from our political roots, we work extensively with
               corporate and nonprofit organizations. We help win campaigns,
               whether they are at the ballot box, legislative sessions, or
@@ -299,26 +474,9 @@
             </p>
           </div>
         </div>
-        <div class="col sqs-col-4 span-4">
+        <div class="col sqs-col-8 span-8 three">
           <div class="cp-inner-text">
-            <div class="cp-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
-                />
-              </svg>
-            </div>
-            <h2>TECH STRATEGY</h2>
-            <p>
+            <p class="xl">
               We enhance the way tech thinks by offering our expertise in
               research on emerging technology trends and issues. On behalf of
               organizations like Cloud Foundry, Google, and OpenStack, we have
@@ -333,47 +491,49 @@
           </div>
         </div>
       </div>
-      <div class="row sqs-row">
-        <div class="col sqs-col-12 span-12">
-          <div
-            class="cp-dark-box"
-            style="color: #ffffff; background: #7f7f7f; margin-top: 30px; margin-bottom: 30px"
-          >
-            <p class="xl">
-              The ClearPath Strategies team serves leaders in domestic and
-              international politics, corporate and non-profit organizations,
-              tech, and in the environmental and sustainability space. Our
-              cross-domain expertise and market position enable us to connect
-              how the world works today with what it will become.
-            </p>
+    </div>
+  </div>
+</div>
 
-            <div
-              class="sqs-block button-block sqs-block-button"
-              data-block-type="53"
-              id="block-yui_3_17_2_1_1628257912678_18631"
-              style="padding-left: 0; margin-top: 15px"
-            >
+<div class="bg-gray" style="margin-top: 80px">
+  <div class="container cp-text-1">
+    <div class="row sqs-row">
+      <div class="col sqs-col-12 span-12">
+        <div
+          class="cp-dark-box"
+          style="color: #ffffff; margin-top: 30px; margin-bottom: 30px"
+        >
+          <p class="xl">
+            The ClearPath Strategies team serves leaders in domestic and
+            international politics, corporate and non-profit organizations,
+            tech, and in the environmental and sustainability space. Our
+            cross-domain expertise and market position enable us to connect how
+            the world works today with what it will become.
+          </p>
+
+          <div
+            class="sqs-block button-block sqs-block-button"
+            data-block-type="53"
+            id="block-yui_3_17_2_1_1628257912678_18631"
+            style="padding-left: 0; margin-top: 15px"
+          >
+            <div class="sqs-block-content" id="yui_3_17_2_1_1630552664686_124">
               <div
-                class="sqs-block-content"
-                id="yui_3_17_2_1_1630552664686_124"
+                class="sqs-block-button-container--left"
+                data-animation-role="button"
+                data-alignment="center"
+                data-button-size="medium"
+                id="yui_3_17_2_1_1630552664686_123"
               >
-                <div
-                  class="sqs-block-button-container--left"
-                  data-animation-role="button"
-                  data-alignment="center"
-                  data-button-size="medium"
-                  id="yui_3_17_2_1_1630552664686_123"
+                <a
+                  href="https://clearpath-strategies.com/what-we-do/"
+                  class="
+                    sqs-block-button-element--medium
+                    sqs-block-button-element
+                  "
+                  data-initialized="true"
+                  >See what we do</a
                 >
-                  <a
-                    href="https://clearpath-strategies.com/what-we-do/"
-                    class="
-                      sqs-block-button-element--medium
-                      sqs-block-button-element
-                    "
-                    data-initialized="true"
-                    >See what we do</a
-                  >
-                </div>
               </div>
             </div>
           </div>
@@ -383,94 +543,101 @@
   </div>
 </div>
 
-<div class="bg-image-1">
-  <div class="container" style="padding-top: 80px; padding-bottom: 80px">
-    <div class="cp-text-2 bg-gray" style="background: #ffffff; padding: 45px">
-      <h2>We proudly work with</h2>
-      <div class="border-sep"></div>
-      <p>
-        ClearPath Strategies works with leaders in political, corporate,
-        non-profit, and tech space to provide clear direction and strategy-based
-        solutions for our clients’ unique challenges.
-      </p>
-
-      <div class="cp-image-gallery autoplay">
-        <div>
-          <img
-            src="https://images.squarespace-cdn.com/content/v1/5c250e1c2487fd584efa37f7/1623430214999-SLTXTETRXRCB0A55XM3Y/Air+Bnb.png?format=500w"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            src="https://images.squarespace-cdn.com/content/v1/5c250e1c2487fd584efa37f7/1627082389117-QH4X2CPC92OC8GLQZPTT/ALCU.png?format=500w"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            src="https://images.squarespace-cdn.com/content/v1/5c250e1c2487fd584efa37f7/1623430214999-BCXLJENY1FG5FSIG3WSE/ALDE.png?format=500w"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            src="https://images.squarespace-cdn.com/content/v1/5c250e1c2487fd584efa37f7/1623430215557-DT55B89QKGH0HTABMLWW/Datastax.png?format=500w"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            src="https://images.squarespace-cdn.com/content/v1/5c250e1c2487fd584efa37f7/1623430216013-JZ3ELOFUWLJ8HH69FJK1/Google.png?format=500w"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            src="https://images.squarespace-cdn.com/content/v1/5c250e1c2487fd584efa37f7/1623430216116-DOZ0169DQCXM29CS9WKM/NEW+USBCG.png?format=500w"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            src="https://images.squarespace-cdn.com/content/v1/5c250e1c2487fd584efa37f7/1633567312511-OZS137IQJT2TFEERYKHP/Screen%2BShot%2B2021-07-23%2Bat%2B4.19.05%2BPM.png?format=500w"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            src="https://images.squarespace-cdn.com/content/v1/5c250e1c2487fd584efa37f7/1623430216598-7F48YLFNGXE69OZ32O9U/Stripe.png?format=500w"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            src="https://images.squarespace-cdn.com/content/v1/5c250e1c2487fd584efa37f7/a93d986e-a8c2-4eca-995e-1a58ebd87cd9/C40.png?format=500w"
-            alt=""
-          />
-        </div>
-      </div>
-
-      <div
-        class="sqs-block button-block sqs-block-button"
-        data-block-type="53"
-        id="block-yui_3_17_2_1_1628257912678_16615"
-        style="padding-left: 0"
-      >
-        <div class="sqs-block-content" id="yui_3_17_2_1_1630550916628_122">
+<div class="bg-white">
+  <div class="container">
+    <div class="cp-text-1" style="background: #ffffff">
+      <div class="row sqs-row flex">
+        <div class="col sqs-col-6 span-6">
+          <h2 class="xl">We proudly work with</h2>
+          <div class="border-sep"></div>
+          <p class="xl">
+            ClearPath Strategies works with leaders in political, corporate,
+            non-profit, and tech space to provide clear direction and
+            strategy-based solutions for our clients’ unique challenges.
+          </p>
           <div
-            class="sqs-block-button-container--left"
-            data-animation-role="button"
-            data-alignment="center"
-            data-button-size="medium"
-            id="yui_3_17_2_1_1630550916628_121"
+            class="sqs-block button-block sqs-block-button"
+            data-block-type="53"
+            id="block-yui_3_17_2_1_1628257912678_16615"
+            style="padding-left: 0"
           >
-            <a
-              href="https://clearpath-strategies.com/what-weve-done"
-              class="sqs-block-button-element--medium sqs-block-button-element"
-              data-initialized="true"
-              >What we've done so far</a
-            >
+            <div class="sqs-block-content" id="yui_3_17_2_1_1630550916628_122">
+              <div
+                class="sqs-block-button-container--left"
+                data-animation-role="button"
+                data-alignment="center"
+                data-button-size="medium"
+                id="yui_3_17_2_1_1630550916628_121"
+              >
+                <a
+                  href="https://clearpath-strategies.com/what-weve-done"
+                  class="
+                    sqs-block-button-element--medium
+                    sqs-block-button-element
+                  "
+                  data-initialized="true"
+                  >What we've done so far</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col sqs-col-6 span-6">
+          <div class="cp-static-gallery">
+            <div>
+              <img
+                src="https://images.squarespace-cdn.com/content/v1/5c250e1c2487fd584efa37f7/1623430214999-SLTXTETRXRCB0A55XM3Y/Air+Bnb.png?format=500w"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="https://images.squarespace-cdn.com/content/v1/5c250e1c2487fd584efa37f7/1627082389117-QH4X2CPC92OC8GLQZPTT/ALCU.png?format=500w"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="https://images.squarespace-cdn.com/content/v1/5c250e1c2487fd584efa37f7/1623430214999-BCXLJENY1FG5FSIG3WSE/ALDE.png?format=500w"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="https://images.squarespace-cdn.com/content/v1/5c250e1c2487fd584efa37f7/1623430215557-DT55B89QKGH0HTABMLWW/Datastax.png?format=500w"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="https://images.squarespace-cdn.com/content/v1/5c250e1c2487fd584efa37f7/1623430216013-JZ3ELOFUWLJ8HH69FJK1/Google.png?format=500w"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="https://images.squarespace-cdn.com/content/v1/5c250e1c2487fd584efa37f7/1623430216116-DOZ0169DQCXM29CS9WKM/NEW+USBCG.png?format=500w"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="https://images.squarespace-cdn.com/content/v1/5c250e1c2487fd584efa37f7/1633567312511-OZS137IQJT2TFEERYKHP/Screen%2BShot%2B2021-07-23%2Bat%2B4.19.05%2BPM.png?format=500w"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="https://images.squarespace-cdn.com/content/v1/5c250e1c2487fd584efa37f7/1623430216598-7F48YLFNGXE69OZ32O9U/Stripe.png?format=500w"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="https://images.squarespace-cdn.com/content/v1/5c250e1c2487fd584efa37f7/a93d986e-a8c2-4eca-995e-1a58ebd87cd9/C40.png?format=500w"
+                alt=""
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -482,7 +649,7 @@
   <div class="cp-text-1">
     <div class="container">
       <div class="row sqs-row">
-        <h2>Our Approach</h2>
+        <h2 class="xl">Our Approach</h2>
         <div
           class="border-sep"
           style="margin-top: 45px; margin-bottom: 45px"
@@ -551,4 +718,46 @@
     </div>
   </div>
 </div>
-<!-- end -->
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(".cp-open-link").click(function () {
+    if ($(this).parent().parent().hasClass("one-link")) {
+      $(".one-link").show();
+      $(".two-link").hide();
+      $(".three-link").hide();
+      $(".one").show();
+      $(".two").hide();
+      $(".three").hide();
+    } else if ($(this).parent().parent().hasClass("two-link")) {
+      $(".one-link").hide();
+      $(".two-link").show();
+      $(".three-link").hide();
+      $(".one").hide();
+      $(".two").show();
+      $(".three").hide();
+    } else if ($(this).parent().parent().hasClass("three-link")) {
+      $(".one-link").hide();
+      $(".two-link").hide();
+      $(".three-link").show();
+      $(".one").hide();
+      $(".two").hide();
+      $(".three").show();
+    }
+
+    $(".cp-open-link").hide();
+    $(".cp-reset-link").show();
+  });
+
+  $(".cp-reset-link").click(function () {
+    $(".one-link").show();
+    $(".two-link").show();
+    $(".three-link").show();
+    $(".one").hide();
+    $(".two").hide();
+    $(".three").hide();
+
+    $(".cp-open-link").show();
+    $(".cp-reset-link").hide();
+  });
+</script>
