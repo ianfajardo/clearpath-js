@@ -60,6 +60,11 @@
     font-size: 1.5rem;
   }
 
+  .cp-hover-section,
+  .cp-expaded-section {
+    cursor: pointer;
+  }
+
   .cp-text-1 p.xl,
   .bg-image-1 p.xl {
     font-size: 25px;
@@ -286,6 +291,7 @@
     cursor: pointer;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    display: none;
   }
 
   .cp-reset-link {
@@ -315,10 +321,15 @@
     padding: 60px;
   }
 
-  .one,
-  .two,
-  .three {
+  .initial-hover {
+    cursor: pointer;
+  }
+
+  .one-hover,
+  .two-hover,
+  .three-hover {
     display: none;
+    cursor: pointer;
   }
 
   .one:before,
@@ -373,9 +384,9 @@
           <div class="border-sep" style="margin: 30px auto"></div>
         </div>
       </div>
-      <div class="row sqs-row">
-        <div class="col sqs-col-4 span-4 one-link">
-          <div class="cp-inner-text cp-inner-text-bg1">
+      <div class="row sqs-row initial-hover">
+        <div class="col sqs-col-4 span-4 one-initial-link">
+          <div class="cp-inner-text cp-inner-text-bg1 cp-hover-section">
             <div class="cp-icon-title">
               <h2>POLITICAL CAMPAIGN DNA</h2>
             </div>
@@ -398,8 +409,8 @@
             <div class="cp-reset-link">Go Back</div>
           </div>
         </div>
-        <div class="col sqs-col-4 span-4 two-link">
-          <div class="cp-inner-text cp-inner-text-bg2">
+        <div class="col sqs-col-4 span-4 two-initial-link">
+          <div class="cp-inner-text cp-inner-text-bg2 cp-hover-section">
             <div class="cp-icon-title">
               <h2>HELPING LEADERS LEAD WITH CONFIDENCE</h2>
             </div>
@@ -422,8 +433,8 @@
             <div class="cp-reset-link">Go Back</div>
           </div>
         </div>
-        <div class="col sqs-col-4 span-4 three-link">
-          <div class="cp-inner-text cp-inner-text-bg3">
+        <div class="col sqs-col-4 span-4 three-initial-link">
+          <div class="cp-inner-text cp-inner-text-bg3 cp-hover-section">
             <div class="cp-icon-title">
               <h2>NAVIGATING EXPONENTIAL CHANGE IN TECHNOLOGY</h2>
             </div>
@@ -446,7 +457,33 @@
             <div class="cp-reset-link">Go Back</div>
           </div>
         </div>
-        <div class="col sqs-col-8 span-8 one">
+      </div>
+      <div class="row sqs-row one-hover">
+        <div class="col sqs-col-4 span-4 one-link">
+          <div class="cp-inner-text cp-inner-text-bg1 cp-hover-section">
+            <div class="cp-icon-title">
+              <h2>POLITICAL CAMPAIGN DNA</h2>
+            </div>
+            <div class="cp-open-link">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
+              </svg>
+            </div>
+            <div class="cp-reset-link">Go Back</div>
+          </div>
+        </div>
+        <div class="col sqs-col-8 span-8 one cp-expanded-section">
           <div class="cp-inner-text" style="background: #36b3a8">
             <p class="xl">
               ClearPath Strategies’ expertise is rooted in global politics. We
@@ -458,18 +495,70 @@
             </p>
           </div>
         </div>
+      </div>
+      <div class="row sqs-row two-hover">
+        <div class="col sqs-col-4 span-4 two-link">
+          <div class="cp-inner-text cp-inner-text-bg2 cp-hover-section">
+            <div class="cp-icon-title">
+              <h2>HELPING LEADERS LEAD WITH CONFIDENCE</h2>
+            </div>
+            <div class="cp-open-link">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
+              </svg>
+            </div>
+            <div class="cp-reset-link">Go Back</div>
+          </div>
+        </div>
         <div class="col sqs-col-8 span-8 two">
           <div class="cp-inner-text" style="background: #1f4b7c">
             <p class="xl">
               At heart, we are data-driven strategists. We work extensively with
               corporate and nonprofit organizations, using research to guide
               leaders through the series of choices they face. Our work has
-              tackled some of the most pressing topics of today and
-              tomorrow--from vaccine hesitancy to sustainability to industry
-              disruption. Whatever the challenge, we translate research into
-              actionable recommendations--strategy, messaging, and
-              positioning--for our clients.
+              tackled some of the most pressing topics of today and tomorrow —
+              from vaccine hesitancy to sustainability to industry disruption.
+              Whatever the challenge, we translate research into actionable
+              recommendations — strategy, messaging, and positioning — for our
+              clients.
             </p>
+          </div>
+        </div>
+      </div>
+      <div class="row sqs-row three-hover">
+        <div class="col sqs-col-4 span-4 three-link">
+          <div class="cp-inner-text cp-inner-text-bg3 cp-hover-section">
+            <div class="cp-icon-title">
+              <h2>NAVIGATING EXPONENTIAL CHANGE IN TECHNOLOGY</h2>
+            </div>
+            <div class="cp-open-link">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
+              </svg>
+            </div>
+            <div class="cp-reset-link">Go Back</div>
           </div>
         </div>
         <div class="col sqs-col-8 span-8 three">
@@ -479,14 +568,15 @@
               thinking to the technology industry. We have worked with a wide
               range from clients from open source foundations, to hypergrowth
               SaaS companies, to industry giants like Google, on cutting edge
-              topics--Kubernetes and containerization, ML and real-time data,
+              topics — Kubernetes and containerization, ML and real-time data,
               cloud native security, etc. In addition to surveys, we liberally
-              employ qualitative research--focus groups, 1:1 executive
-              interviews, practitioner ethnographies--to understand not only the
-              pragmatic needs (the what) but the emotional needs of the target
-              audience (the why). Our broad experience has proven invaluable as
-              we help our clients navigate their challenges be it strategy,
-              positioning, messaging, persona segmentation, UX, and more.
+              employ qualitative research — focus groups, 1:1 executive
+              interviews, practitioner ethnographies — to understand not only
+              the pragmatic needs (the <i>what</i>) but the emotional needs of
+              the target audience (the <i>why</i>). Our broad experience has
+              proven invaluable as we help our clients navigate their challenges
+              be it strategy, positioning, messaging, persona segmentation, UX,
+              and more.
             </p>
           </div>
         </div>
@@ -506,9 +596,7 @@
           <p class="xl">
             The ClearPath Strategies team serves leaders in global politics,
             corporate and non-profit organizations, tech, and in the
-            environmental and sustainability space. Our cross-domain expertise
-            and market position enable us to connect how the world works today
-            with what it will become.
+            environmental and sustainability space.
           </p>
 
           <div
@@ -616,7 +704,7 @@
       >
         <div class="sqs-block-content" id="yui_3_17_2_1_1630550916628_122">
           <div
-            class="sqs-block-button-container--left"
+            class="sqs-block-button-container--center"
             data-animation-role="button"
             data-alignment="center"
             data-button-size="medium"
@@ -712,43 +800,48 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-  $(".cp-open-link").click(function () {
-    if ($(this).parent().parent().hasClass("one-link")) {
-      $(".one-link").show();
-      $(".two-link").hide();
-      $(".three-link").hide();
-      $(".one").show();
-      $(".two").hide();
-      $(".three").hide();
-    } else if ($(this).parent().parent().hasClass("two-link")) {
-      $(".one-link").hide();
-      $(".two-link").show();
-      $(".three-link").hide();
-      $(".one").hide();
-      $(".two").show();
-      $(".three").hide();
-    } else if ($(this).parent().parent().hasClass("three-link")) {
-      $(".one-link").hide();
-      $(".two-link").hide();
-      $(".three-link").show();
-      $(".one").hide();
-      $(".two").hide();
-      $(".three").show();
-    }
 
-    $(".cp-open-link").hide();
-    $(".cp-reset-link").show();
-  });
+  $(".one-initial-link").hover(function(){
+    $(".initial-hover").hide();
+    $(".one-hover").show();
+    $(".two-hover").hide();
+    $(".three-hover").hide();
+  }); 
 
-  $(".cp-reset-link").click(function () {
-    $(".one-link").show();
-    $(".two-link").show();
-    $(".three-link").show();
-    $(".one").hide();
-    $(".two").hide();
-    $(".three").hide();
+  $(".two-initial-link").hover(function(){
+    $(".initial-hover").hide();
+    $(".one-hover").hide();
+    $(".two-hover").show();
+    $(".three-hover").hide();
+  }); 
 
-    $(".cp-open-link").show();
-    $(".cp-reset-link").hide();
-  });
+  $(".three-initial-link").hover(function(){
+    $(".initial-hover").hide();
+    $(".one-hover").hide();
+    $(".two-hover").hide();
+    $(".three-hover").show();
+  }); 
+
+  $(".one-hover").mouseleave(function(){
+    $(".initial-hover").show();
+    $(".one-hover").hide();
+    $(".two-hover").hide();
+    $(".three-hover").hide();
+  }); 
+
+  $(".two-hover").mouseleave(function(){
+    $(".initial-hover").show();
+    $(".one-hover").hide();
+    $(".two-hover").hide();
+    $(".three-hover").hide();
+  }); 
+
+  $(".three-hover").mouseleave(function(){
+    $(".initial-hover").show();
+    $(".one-hover").hide();
+    $(".two-hover").hide();
+    $(".three-hover").hide();
+  }); 
+  
+
 </script>
