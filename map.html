@@ -11,7 +11,7 @@
 <div id="clearpath_map"></div>
 
 <script>
-  var datamap = new Datamap({
+    var datama0p = new Datamap({
     scope: "world",
     projection: "mercator",
     responsive: true,
@@ -20,7 +20,9 @@
       highlightOnHover: false,
       popupTemplate: function (geography, data) {
         return (
-          '<div class="hoverinfo" style="padding:10px; ' + (data.fillKey) + '">' +
+          '<div class="hoverinfo" style="padding:10px; ' +
+          data.fillKey +
+          '">' +
           geography.properties.name +
           /*"<br/>" +
           data.tooltipCopy + */
@@ -187,7 +189,37 @@
       },
       CYP: {
         fillKey: "work",
-      }
+      },
+      ZAF: {
+        fillKey: "work",
+      },
+      PNG: {
+        fillKey: "work",
+      },
+      ECU: {
+        fillKey: "work",
+      },
+      PAN: {
+        fillKey: "work",
+      },
+      CRI: {
+        fillKey: "work",
+      },
+      COK: {
+        fillKey: "work",
+      },
+      CRI: {
+        fillKey: "work",
+      },
+      FSM: {
+        fillKey: "work",
+      },
+      SGP: {
+        fillKey: "work",
+      },
+      MYS: {
+        fillKey: "work",
+      },
     },
   });
 

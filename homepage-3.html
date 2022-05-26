@@ -133,7 +133,7 @@
   }
 
   .cp-image-text {
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 1.2;
     padding: 15px;
   }
@@ -355,6 +355,9 @@
     .row {
       display: block !important;
     }
+    .initial-hover {
+      display: none !important;
+    }
     .sqs-layout [class*="sqs-col"] {
       float: none !important;
       width: auto !important;
@@ -374,12 +377,12 @@
 </style>
 
 <div class="cp-slanted1">
-  <div class="cp-text-1" style="padding-bottom: 0">
+  <div class="cp-text-1" style="padding-bottom: 80px">
     <div class="">
       <div class="row sqs-row">
         <div class="col sqs-col-12 span-12" style="text-align: center">
           <h2 class="xl" style="margin-bottom: 15px">
-            POLITICS. TECH. ISSUES THAT MATTER.
+            WE WORK ON THE ISSUES THAT MATTER.
           </h2>
           <div class="border-sep" style="margin: 30px auto"></div>
         </div>
@@ -582,46 +585,27 @@
         </div>
       </div>
     </div>
-  </div>
-</div>
 
-<div class="cp-text-1">
-  <div class="container">
-    <div class="row sqs-row">
-      <div class="col sqs-col-12 span-12">
+    <div
+      class="sqs-block button-block sqs-block-button"
+      data-block-type="53"
+      id="block-yui_3_17_2_1_1628257912678_18631"
+      style="padding-left: 0; margin-top: 15px"
+    >
+      <div class="sqs-block-content" id="yui_3_17_2_1_1630552664686_124">
         <div
-          class="cp-dark-box"
-          style="color: #ffffff; margin-top: 30px; margin-bottom: 30px"
+          class="sqs-block-button-container--center"
+          data-animation-role="button"
+          data-alignment="center"
+          data-button-size="medium"
+          id="yui_3_17_2_1_1630552664686_123"
         >
-          <p class="xl">
-            The ClearPath Strategies team serves leaders in global politics,
-            corporate and non-profit organizations, tech, and in the
-            environmental and sustainability space.
-          </p>
-
-          <div
-            class="sqs-block button-block sqs-block-button"
-            data-block-type="53"
-            id="block-yui_3_17_2_1_1628257912678_18631"
-            style="padding-left: 0; margin-top: 15px"
+          <a
+            href="https://clearpath-strategies.com/what-we-do/"
+            class="sqs-block-button-element--medium sqs-block-button-element"
+            data-initialized="true"
+            >Our Work</a
           >
-            <div class="sqs-block-content" id="yui_3_17_2_1_1630552664686_124">
-              <div
-                class="sqs-block-button-container--center"
-                data-animation-role="button"
-                data-alignment="center"
-                data-button-size="medium"
-                id="yui_3_17_2_1_1630552664686_123"
-              >
-                <a
-                  href="https://clearpath-strategies.com/what-we-do/"
-                  class="sqs-block-button-element--medium sqs-block-button-element"
-                  data-initialized="true"
-                  >Our Work</a
-                >
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -741,29 +725,39 @@
 
       <div class="row sqs-row">
         <div class="col sqs-col-4 span-4">
-          <div class="cp-image-title">RESEARCH WITH <br />ANYONE, ANYWHERE</div>
+          <div class="cp-image-title">STATETGIC <br />LENS</div>
           <div class="cp-image-hover cp-image-1">
             <div class="cp-image-text">
-              Best-in-class qualitative and quantitative research with any
-              audience, virtually anywhere in the world.
+              We are strategic partners first and foremost. We bring decades of
+              experience as campaign strategists to every engagement. We aren’t
+              marketers, we aren’t market researchers—we cut our teeth running
+              winning campaigns. That’s who we are and what we’ll do for you.
             </div>
           </div>
         </div>
         <div class="col sqs-col-4 span-4">
-          <div class="cp-image-title">INNOVATIVE <br />METHODOLOGIES</div>
+          <div class="cp-image-title">
+            GLOBAL REACH <br />WITHOUT COMPROMISE
+          </div>
           <div class="cp-image-hover cp-image-2">
             <div class="cp-image-text">
-              We apply cutting-edge research methodologies to best serve the
-              diverse challenges of each client.
+              Effective strategies require a clear picture of what's happening
+              on the ground. Whether your strategy depends on buy-in from
+              voters, the media, or Fortune 50 cloud decision-makers, we have
+              decades of experience researching the right audiences. We’d rather
+              tell you a project isn’t feasible than over-promise and
+              under-deliver.
             </div>
           </div>
         </div>
         <div class="col sqs-col-4 span-4">
-          <div class="cp-image-title">STRATEGY AND <br />EXECUTION</div>
+          <div class="cp-image-title">TRUSTED BY <br />GLOBAL LEADERS</div>
           <div class="cp-image-hover cp-image-3">
             <div class="cp-image-text">
-              We are strategic partners first. Our strategy compels the action
-              our clients need – now and into the future.
+              Trust is difficult to earn. Leaders of all types—from enterprise
+              Chief Strategy Officers to Prime Ministers—trust us with setting
+              their agendas for the near- and long-term. We’ve worked hard to
+              get here.
             </div>
           </div>
         </div>
@@ -800,48 +794,45 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-
-  $(".one-initial-link").hover(function(){
+  $(".one-initial-link").hover(function () {
     $(".initial-hover").hide();
     $(".one-hover").show();
     $(".two-hover").hide();
     $(".three-hover").hide();
-  }); 
+  });
 
-  $(".two-initial-link").hover(function(){
+  $(".two-initial-link").hover(function () {
     $(".initial-hover").hide();
     $(".one-hover").hide();
     $(".two-hover").show();
     $(".three-hover").hide();
-  }); 
+  });
 
-  $(".three-initial-link").hover(function(){
+  $(".three-initial-link").hover(function () {
     $(".initial-hover").hide();
     $(".one-hover").hide();
     $(".two-hover").hide();
     $(".three-hover").show();
-  }); 
+  });
 
-  $(".one-hover").mouseleave(function(){
+  $(".one-hover").mouseleave(function () {
     $(".initial-hover").show();
     $(".one-hover").hide();
     $(".two-hover").hide();
     $(".three-hover").hide();
-  }); 
+  });
 
-  $(".two-hover").mouseleave(function(){
+  $(".two-hover").mouseleave(function () {
     $(".initial-hover").show();
     $(".one-hover").hide();
     $(".two-hover").hide();
     $(".three-hover").hide();
-  }); 
+  });
 
-  $(".three-hover").mouseleave(function(){
+  $(".three-hover").mouseleave(function () {
     $(".initial-hover").show();
     $(".one-hover").hide();
     $(".two-hover").hide();
     $(".three-hover").hide();
-  }); 
-  
-
+  });
 </script>
